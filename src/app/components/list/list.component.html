@@ -2,7 +2,7 @@
   <h3>| Awesome list of Quotes</h3>
     <ul>
       <li *ngFor="let item of list">
-        <app-list-item [item]="item"></app-list-item>
+        <app-list-item [item]="item" (onDeleteOfItem)="removeFromList($event)"></app-list-item>
       </li>
     </ul>
 </div>
