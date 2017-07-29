@@ -31,6 +31,8 @@ p{
   padding-right: 10px;
   margin-right: 15px;
 }
-
+a.btn.btn-danger{
+  float: right;
+}
 
 
