@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,  } from '@angular/core';
 
 @Component({
   selector: 'app-list',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-list : Object[] = [{
+list : any[] = [{
                   id: 1,
                quote: "Strive not to be a success, but rather to be of value.",
               author: "Albert Einstein"
@@ -35,11 +35,17 @@ list : Object[] = [{
                   id: 6,
                quote: "You can never cross the ocean until you have the courage to lose sight of the shore. ",
               author: "Christopher Columbus"
-},
-]
-  constructor() { }
+}];
 
-  ngOnInit() {
-  }
+  constructor() {}
 
+  ngOnInit() {}
+
+  removeFromList(emittedId){
+    //console.log(emittedId);
+    this.list = this.list.filter((everyListItemThatIts) => {
+      //console.log(everyListItemThatIts);
+       return everyListItemThatIts.id !== emittedId; })
+    }
 }
+
