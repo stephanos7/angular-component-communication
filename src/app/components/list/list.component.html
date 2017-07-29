@@ -1,4 +1,6 @@
-<p>
-  list works!
-</p>
-<app-list-item></app-list-item>
+<div class="col-lg-offset-6col-lg-6">
+  <ul>
+    <li *ngFor="let item of list">
+      <app-list-item [item]="item"></app-list-item>
+    </li>
+  </ul>
